@@ -1,0 +1,159 @@
+from tkinter import *
+root = Tk()
+root.title("Tatyasaheb kore institute of Engineering and technology Warananagar")
+f1 = open("E:\Questions.txt","a+")
+
+
+def department(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "College Buddy: Departments\n1.Computer science and Engineering\n2.Chemical Engineering \n3.Civil Engineering \n4.Electrical Engineering \n5.Mechanical Engineering")
+    e.delete(0, END)
+
+def hlp(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "College Buddy: \n Sure, It will be my pleasure")
+    e.delete(0, END)
+
+def library(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "College Buddy: \n Welcome to TKIET Library. \n Timing :Moday to Saturday 9:00AM to 5:00PM. \n Available Books : 10000.\n News Papers Available: Lokmat, Times Of India, Loksatta, Pudhari. ")
+    e.delete(0, END)
+    
+def hostel(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "  College Buddy \n Incharge Of Hostel: Thombre Sir \n\n Hostel Timing:8:00AM to 10:00PM \n\n Hostel Building: 12 Building \n\n Boys Hostel: 9 Building \n\n Girls Hostel: 3 Building  \n\n Hostel Facilities:\n -24*7 Wi-Fi connectivity \n\n -24*7 water and electricity \n\n -24 hours security \n\n -Hygienic Environment \n   ")
+    e.delete(0, END)
+
+def mess(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + " College Buddy \n Mess Incharge: Thombre Sir \n\n Mess House: 02 House \n\n Boys Mess: 01 (Golden Mess) \n\n Girls Mess: 01 (Golden Mess) \n\n Mess Lunch Time: 12:30PM to 2:00PM \n\n Dinner Time: 7:00PM to 8:30PM \n\n Section: VEG & NONVEG (Healthy Foods) \n\n 1. Hygienic Environment 2. Safe Drinking Water (RO Water) ")
+    e.delete(0, END)
+
+def sport(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + " College Buddy \n Sport Incharge: Kurne Sir \n\n Sport Ground Name: Chhatrapati Kridangan  \n\n Ground Open: 6:00AM to 8:00PM \n\n Sport Activity: Indoor games(Chess, Carrom , Table Tennis,etc.) and Outdoor \n games(Cricket, Kabbadi, Handball, Football,etc) \n\n GYM: Time: Morning Time(6:00 to 8:00AM) Evening Time(6:00PM to 8:00PM) \n\n Yoga: Time:6:00AM to 7:00AM \n\n Yoga Type: 1.HATHA Yoga 2.VINYASA Yoga 3.ASHTANGA Yoga ")
+    e.delete(0, END)
+
+def TP(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "College Buddy \n Training and Placement details: Placement Incharge: \n -Prof Rajkumar Shikkeri Sir \n -Prof Manjunath Sir \n -Prof Biradar Sir \n\n Companies: TCS, WIPRO, IBM, ACCENTURE, COGNIZANT, GALAXY \n\n *Highest Package: 14LPA \n\n Placement Count (2020-2021): 1.Computer Science(125) \n 2.Chemical Engineering(65) \n 3.Electrical Engineering(60) \n 4.Mechanical Engineering(27)")
+    e.delete(0, END)
+
+def event(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + " College Buddy \n College Event Details: EUREKA, Spandan, Jidnyasa, Dahihandi, Traditional Day,etc.")
+    e.delete(0, END)
+
+def admission(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + " College Buddy \n Admission Details: Available Courses: 1.B.Tech \n 2.M.Tech \n 3.Diploma \n Departments: \n1.Computer Science Engineering \n2.Chemical Engineering \n3.Electrical Engineering \n4.Mechanical Engineering \n5.Civil Engineering \n Admission Incharge: \n First Year: Dr.Amol.V.Patil \n Second Year: Dr.Prashant.J.Patil \n Contact Details: Tel (02328-224012/224013)\n Email- admission@tkietwarana.ac.in \n Fees Details: OPEN/OBC(58,600), NT/SC(12,500)")
+    e.delete(0, END)
+
+def ci(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + " College Buddy \n Collage Name: Tatyasaheb Kore Institute Of Engineering and Technology Warananagar, Kolhapur(416113) \n Principal: Dr.S.V.Anekar \n Chairman: Hon.Dr.Vinayroji Kore \n Admin: Dr.Vasanti Rasam")
+    e.delete(0, END)
+
+def introduction(tmp):
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "Hi Dear, I am here to help you.")
+    e.delete(0, END)
+        
+
+
+def send():
+    tmp=e.get()
+    
+    ##for departments
+    ls1=["college department","departments","how many departments","departments info"]
+    if tmp.lower() in ls1:
+        department(tmp)
+        return
+
+
+    ##for help
+    ls2=["help","can you help me","please help me","could you help me","please help","help me"]
+    if tmp.lower() in ls2:
+        hlp(tmp)
+        return
+
+    ##for liabrary
+    ls3=["library","library functionality","books","book bank","news paper"]
+    if tmp.lower() in ls3:
+        library(tmp)
+        return
+
+    ##for Hostel Details
+    ls4=["hostel","hostel detail"]
+    if tmp.lower() in ls4:
+        hostel(tmp)
+        return
+
+    ##for Mess Detail
+    ls5=["mess","mess details"]
+    if tmp.lower() in ls5:
+        mess(tmp)
+        return
+
+    ##for Sport Detail
+    ls6=["sport","sport details"]
+    if tmp.lower() in ls6:
+        sport(tmp)
+        return
+
+    ##for Training And Placement Details
+    ls7=["t&p","training and placement","tp"]
+    if tmp.lower() in ls7:
+        TP(tmp)
+        return
+
+    ##for Training And Placement Details
+    ls8=["event","college event"]
+    if tmp.lower() in ls8:
+        event(tmp)
+        return
+
+    ##for Admission Details
+    ls9=["admission","admission detail"]
+    if tmp.lower() in ls9:
+        admission(tmp)
+        return
+
+
+    ##for College Information
+    ls10=["ci","collage info","clg info"]
+    if tmp.lower() in ls10:
+        ci(tmp)
+        return
+
+    ##Introduction
+    ls11=["hii","hiiii","hi","hello"]
+    if tmp.lower() in ls11:
+        introduction(tmp)
+        return
+
+    f1.write(tmp+"\n")
+    send = "You : "+tmp
+    txt.insert(END, "\n"+send)
+    txt.insert(END, "\n" + "Sorry, I didnt get you. I will Update Myself.")
+    e.delete(0, END)
+    
+
+txt = Text(root)
+txt.grid(row=0, column=0, columnspan=2)
+e = Entry(root, width=100)
+e.grid(row=1, column=0)
+send = Button(root, text="Send", command=send).grid(row=1, column=1)
+root.mainloop()
+f1.close()
